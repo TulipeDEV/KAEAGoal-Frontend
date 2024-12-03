@@ -6,6 +6,8 @@ import LoginPage from './components/LoginPage';
 import Dashboard from './components/Dashboard';
 import RewardList from './components/RewardList';
 import RewardDetail from './components/RewardDetail';
+import ProfilePage from './components/ProfilePage';
+import UpdateProfilePage from './components/UpdateProfilePage';
 
 function App() {
   return (
@@ -34,6 +36,22 @@ function App() {
           element={
             <PrivateRoute>
               <RewardDetail />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/ProfilePage"
+          element={
+            <PrivateRoute>
+              <ProfilePage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/profile/edit"
+          element={
+            <PrivateRoute>
+              <UpdateProfilePage />
             </PrivateRoute>
           }
         />
