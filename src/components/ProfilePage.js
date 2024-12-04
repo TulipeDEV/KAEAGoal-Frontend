@@ -57,6 +57,7 @@ const ProfilePage = () => {
                     src={user.profilePictureUrl || 'default-profile-pic.jpg'} // Use the correct key
                     alt="Profile"
                     className="profile-img"
+                    style={{ width: "100px", height: "100px", borderRadius: "50%" }}
                 />
                 <div className="profile-info">
                     <h2>{user.displayname || "N/A"}</h2>
@@ -65,6 +66,8 @@ const ProfilePage = () => {
                     <p><strong>Coins:</strong></p>
                     <p><strong>KAEACoin:</strong> {user.KAEACoin || 0}</p>
                     <p><strong>THANKCoin:</strong> {user.THANKCoin || 0}</p>
+                    <p><strong>Department:</strong> {user.department || "Not assigned"}</p>
+                    <p><strong>Workplace:</strong> {user.workplace || "Not assigned"}</p>
                 </div>
             </div>
             <button onClick={() => navigate('/profile/edit')}>Edit Profile</button>
